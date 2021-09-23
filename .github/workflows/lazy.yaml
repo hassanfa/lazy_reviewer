@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: lazy reviewer file counter
         id: lazy_rev
-        uses: hassanfa/lazy_reviewer@v2
+        uses: hassanfa/lazy_reviewer@v3
         with:
           max-file-per-pr: 3 
           access-token: ${{ secrets.GITHUB_TOKEN }} 
