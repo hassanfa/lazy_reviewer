@@ -9,4 +9,6 @@ jobs:
         id: lazy_rev
         uses: hassanfa/lazy_reviewer@v2
         with:
-          max-files-per-pr: 10
+          max-file-per-pr: 3 
+          access-token: ${{ secrets.GITHUB_TOKEN }} 
+          ignore-draft: false
