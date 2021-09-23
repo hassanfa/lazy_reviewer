@@ -7,4 +7,4 @@ jobs:
     steps:
       - name: lazy reviewer file counter
         id: lazy_rev
-        uses: hassanfa/lazy_reviewer@v1
+        uses: hassanfa/lazy_reviewer@v2
