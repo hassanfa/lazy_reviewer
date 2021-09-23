@@ -1,0 +1,10 @@
+on: [pull_request]
+
+jobs:
+  changed_file_on_pr:
+    runs-on: ubuntu-latest
+    name: Count files changed and complain
+    steps:
+      - name: lazy reviewer file counter
+        id: lazy_rev
+        uses: hassanfa/lazy_reviewer@v1
