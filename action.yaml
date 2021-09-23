@@ -1,0 +1,22 @@
+name: 'Lazy reviewer assistance'
+description: 'Check number of files changed and complain'
+author: 'Hassan Foroughi'
+inputs:
+  access-token:
+    description: 'GitHub access token'
+    required: true
+  max-file-per-pr:
+    description: 'maximum file changes allowed'
+    required: false
+    default: '3'
+  ignore-draft:
+    description: 'ignore draft prs'
+    required: false
+    default: 'true'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.max-file-per-pr }}
+    - ${{ inputs.access-token }}
+    - ${{ inputs.ignore-draft }}
